@@ -80,6 +80,7 @@ const Weather = () => {
           {renderCard(CONDITIONS.CONDITION, weatherData.current.condition.text)}
           {renderCard(CONDITIONS.WIND_SPEED, weatherData.current.wind_kph + " km/h")}
           {renderCard(CONDITIONS.HUMIDITY, weatherData.current.humidity + " %")}
+          {loading && <p>Loading data...</p>}
         </div>
       </>
     ) : null;
@@ -95,7 +96,6 @@ const Weather = () => {
         >
           Search
         </button>
-        {loading && <p>Loading data…</p>}
         {renderLocationData()}
       </div>
     </div>
